@@ -1,0 +1,317 @@
+.TrangCaNhanChiTiet{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 150px;
+    .TrangCaNhanChiTiet__trai{
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+        width: calc(100% - 70% - 50px);
+        .TrangCaNhanChiTiet__trai__tren__anh{
+            width: 225px;
+            height: 225px;
+            border-radius: 50%;
+            overflow: hidden;
+            img{
+                width: 225px;
+                height: 225px;
+                object-fit: cover;
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .TrangCaNhanChiTiet__trai__duoi{
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            .TrangCaNhanChiTiet__trai__duoi__item{
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+                h1{
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #000;
+                }
+                input{
+                    margin-top: 5px;
+                    width: 300px;
+                    height: 50px;
+                    border-radius: 5px;
+                    border: 1px solid #ccc;
+                    padding: 0 10px;
+                }
+            }
+        }
+        .TrangCaNhanChiTiet__button{
+            display: flex;
+            flex-direction: row;
+            margin-top: 30px;
+            #TrangCaNhanChiTiet__button{
+                width: 150px;
+                height: 40px;
+                margin: 0 5px;
+                background-color: var(--main-color);
+                color: #eee;
+                font-weight: 500;
+                border-radius: 15px;
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+                &:hover{
+                    background-color: #eee;
+                    color: var(--main-color);
+                }
+            }
+        }
+    }
+    .TrangCaNhanChiTiet__phai {
+        display: flex;
+        flex-direction: row;
+        margin-top: 80px;
+        width: 70%;
+        .TrangCaNhanChiTiet__phai__danhsach {
+            display: flex;
+            flex-direction: column;
+            margin-left: 40px;
+            position: relative;
+            .TrangCaNhanChiTiet__phai__danhsach__title {
+                h1 {
+                    font-size: 30px;
+                    color: #12152E;
+                    font-weight: 800;
+                }
+            }
+
+            .TrangCaNhanChiTiet__phai__danhsach__items {
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+                .TrangCaNhanChiTiet__phai__danhsach__item {
+                    display: flex;
+                    flex-direction: row;
+                    position: relative;
+                    border: 1px solid #eee;
+                    padding: 20px;
+                    border-radius: 15px;
+                    margin-bottom: 20px;
+                    transition: all 0.3s ease-in-out;
+                    .TrangCaNhanChiTiet__phai__danhsach__item__link{
+                        text-decoration: none   ;
+                        cursor: pointer;
+                    }
+                    &:hover {
+                        -webkit-box-shadow: 6px 8px 15px 0px rgba(108, 93, 212, 0.79);
+                        box-shadow: 6px 8px 15px 0px rgba(108, 93, 212, 0.79);
+                    }
+
+                    .TrangCaNhanChiTiet__phai__danhsach__item__hinhanh {
+                        width: 216px;
+                        height: 300px;
+                        position: relative;
+                        margin-right: 40px;
+                        border-radius: 15px;
+
+                        img {
+                            border-radius: 15px;
+                            position: relative;
+                            width: 216px;
+                            height: 300px;
+                            object-fit: cover;
+                            transition: all 0.3s ease-in-out;
+                            overflow: hidden;
+                            cursor: pointer;
+
+                            &:hover {
+                                transform: scale(1.01);
+                            }
+                        }
+                    }
+
+                    .TrangCaNhanChiTiet__phai__danhsach__item__thongtin {
+                        display: flex;
+                        flex-direction: column;
+
+                        .TrangCaNhanChiTiet__phai__danhsach__item__thongtin__tren {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            margin-bottom: 20px;
+
+                            .TrangCaNhanChiTiet__phai__danhsach__item__thongtin__title {
+                                display: flex;
+                                flex-direction: column;
+
+                                h1 {
+                                    font-size: 30px;
+                                    color: #12152E;
+                                    font-weight: 600;
+                                    margin-top: 5px;
+                                }
+
+                                .TrangCaNhanChiTiet__phai__danhsach__item__theloai {
+                                    p {
+                                        color: var(--main-color);
+                                        margin-top: 5px;
+                                    }
+                                }
+                            }
+
+                            .TrangCaNhanChiTiet__phai__danhsach__item__thongtin__phai {
+                                display: flex;
+                                flex-direction: column;
+
+                                .TrangCaNhanChiTiet__phai__danhsach__item__danhgia {
+                                    display: flex;
+                                    flex-direction: row;
+
+                                    .TrangCaNhanChiTiet__phai__danhsach__item__danhgia__sao {
+                                        color: #E1E1E1;
+
+                                        &.active {
+                                            color: #FF764C;
+                                        }
+                                    }
+                                }
+
+                                p {
+                                    text-align: right;
+                                    color: #12152E;
+                                    font-weight: 700;
+                                    margin-top: 5px;
+                                }
+                            }
+                        }
+
+                        .TrangCaNhanChiTiet__phai__danhsach__item__thongtin__desc {
+                            p {
+                                color: rgb(61, 61, 61);
+                                font-weight: 500;
+                                margin-top: 5px;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 3;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                                font-size: 15px;
+                                margin-bottom: 20px;
+                            }
+                        }
+
+                        .TrangCaNhanChiTiet__phai__danhsach__item__thongtin__gia {
+                            margin-bottom: 20px;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            p {
+                                font-size: 30px;
+                                font-weight: 800;
+                                margin-right: 20px;
+                            }
+                            h1{
+                                font-size: 20px;
+                            }
+                        }
+
+                        .TrangCaNhanChiTiet__phai__danhsach__item__thongtin__duoi {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .TrangCaNhanChiTiet__phai__danhsach__item__thongtin__duoi__trai {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+
+                                .TrangCaNhanChiTiet__phai__danhsach__item__thongtin__duoi__trai__tacgia {
+                                    margin-right: 60px;
+
+                                    h1 {
+                                        color: rgb(170, 165, 165);
+                                        font-weight: 400;
+                                        text-align: left;
+                                    }
+
+                                    p {
+                                        color: #333;
+                                        font-weight: 600;
+                                        text-align: center;
+                                    }
+                                }
+
+                                .TrangCaNhanChiTiet__phai__danhsach__item__thongtin__duoi__trai__nam {
+                                    margin-right: 60px;
+
+                                    h1 {
+                                        color: rgb(170, 165, 165);
+                                        font-weight: 400;
+                                        text-align: left;
+                                    }
+
+                                    p {
+                                        color: #333;
+                                        font-weight: 600;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+
+                            .TrangCaNhanChiTiet__phai__danhsach__item__thongtin__duoi__phai {
+                                display: flex;
+                                flex-direction: row;
+
+                                .TrangCaNhanChiTiet__phai__danhsach__item__thongtin__duoi__phai__nut {
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    background-color: var(--main-color);
+                                    padding: 20px 30px;
+                                    border-radius: 15px;
+                                    cursor: pointer;
+                                    transition: all 0.3s ease-in-out;
+
+                                    .TrangCaNhanChiTiet__phai__danhsach__item__thongtin__duoi__phai__nut__icon {
+                                        color: white;
+                                        margin-right: 5px;
+                                    }
+
+                                    p {
+                                        color: white;
+                                        font-weight: 600;
+                                    }
+
+                                    &:hover {
+                                        background-color: #8e96e2;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .TrangCaNhanChiTiet__phai__danhsach__showMoreComment{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 200px;
+                margin-top: 50px;
+                h3{
+                    text-align: center;
+                    width: 100%;
+                    background-color: var(--main-color);
+                    padding: 20px;
+                    color: white;
+                    cursor: pointer;
+                    border-radius: 15px;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        background-color: #626fdf;
+                    }
+                }
+            }
+        }
+    }
+}

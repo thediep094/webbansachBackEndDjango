@@ -1,0 +1,186 @@
+.SachMoi{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+    height: 820px;
+    margin-bottom: 80px;
+    align-items: center;
+    img{
+        position: absolute;
+        width: 100%;
+        height: 820px;
+        object-fit: cover;
+        z-index: 1;
+
+    }
+    .SachMoi__trai{
+        width: 715px;
+        display: flex;
+        flex-direction: column;
+        z-index: 3;
+        margin-left: 150px;
+        justify-content: space-between;
+        margin-right: 150px;
+        .SachMoi__trai__title{
+            display: flex;
+            flex-direction: column;
+            max-width: 430px;
+            h1{
+                font-size: 40px;
+                font-weight: bold;
+                margin-bottom: 35px;
+            }
+            p{
+                font-size: 15px;
+                font-weight: 500;
+                color: rgb(109, 107, 107);
+                margin-bottom: 35px;
+            }
+        }
+        .SachMoi__trai__sach{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            background-color: white;
+            padding: 35px 30px;
+            border-radius: 15px;
+             transition: all .3s ease-in-out;
+             justify-content: space-between;
+            .SachMoi__trai__sach__hinhanh{
+                width: 283px;
+                height: 394px;
+                overflow: hidden;
+                border-radius: 15px;
+                transition: all .3s ease-in-out;
+                position: relative;
+                img{
+                    width: 283px;
+                    position: relative;
+                    height: 394px;
+                    object-fit: cover;
+                    transition: all .3s ease-in-out;
+                    cursor: pointer;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .SachMoi__trai__sach__thongtin{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                margin-left: 20px;
+                width: calc(100% - 283px - 20px);
+                .SachMoi__trai__sach__thongtin__name{
+                    display: flex;
+                    flex-direction: row;
+                    margin-bottom: 0px;
+                    .SachMoi__trai__sach__thongtin__name--icon{
+                        font-size: 90px;
+                        color: #FE754B;
+                    }
+                    .SachMoi__trai__sach__thongtin__name__phai{
+                        margin-left: 10px;
+                        h1{
+                            font-size: 30px;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            margin-bottom: 5px;
+                            margin-top: 10px;
+                            color: #14172F;
+                        }
+                        p{
+                            color: var(--main-color);
+                        }
+                    }
+                }
+                p{
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: rgb(109, 107, 107);
+                    margin-bottom: 10px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 10;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                }
+                h1{
+                    color: #14172F;
+                    margin-bottom: 5px;
+                }
+                h2{
+                    color: #14172F;
+                    margin-bottom: 5px;
+                }
+                .SachMoi__trai__sach__thongtin__gia{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 50px;
+                    margin-left: 10px;
+                    .SachMoi__trai__sach__thongtin__gia__mua{
+                        display: flex;
+                        flex-direction: row;
+                        color: white;
+                        background-color: var(--main-color);
+                        padding: 15px 25px;
+                        border-radius: 15px;
+                        align-items: center;
+                        justify-content: center;
+                        transition: all .3s ease-in-out;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: #8a7de0;
+                        }
+                        .SachMoi__trai__sach__thongtin__gia__mua__icon{
+                            font-size: 20px;
+                        }
+                        h1{
+                            color: white;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .SachMoi__phai{
+        width: 800px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: hidden;
+        position: absolute;
+        margin-right: 150px;
+        margin-left: 900px;
+        top: 80px;
+        .SachMoi__phai__item{
+            width: 230px;
+            height: 320px;
+            border-radius: 15px;
+            position: relative;
+            margin: 5px 10px;
+            cursor: pointer;
+            overflow: hidden;
+            img{
+                width: 230px;
+                height: 320px;
+                object-fit: cover;
+                position: relative;
+                border-radius: 15px;
+                transition: all .3s ease-in-out;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    }
+    
+}

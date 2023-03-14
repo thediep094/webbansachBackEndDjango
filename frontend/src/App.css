@@ -1,0 +1,12 @@
+*{ 
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+ }
+
+:root{
+  --main-color : #6c5dd4;
+}

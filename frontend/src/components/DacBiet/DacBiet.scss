@@ -1,0 +1,169 @@
+.DacBiet {
+    margin: 100px 150px 20px 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .DacBiet__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 550px;
+
+        h3 {
+            font-size: 40px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 15px;
+            margin-bottom: 80px;
+            color: #333;
+            text-align: center;
+        }
+    }
+
+    .DacBiet__items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .DacBiet__item {
+            border-radius: 15px;
+            width: 31%;
+            overflow: hidden;
+            height: 660px;
+            border: 1px solid rgb(0, 0, 0, 0.1);
+            display: none;
+            cursor: pointer;
+            &.active{
+                display: block;
+            }
+            .DacBiet__item__img {
+                img {
+                    width: 100%;
+                    height: 290px;
+                    object-fit: cover;
+                    object-position: bottom;
+                }
+            }
+
+            .DacBiet__item__thongtin {
+                display: flex;
+                flex-direction: column;
+                margin: 20px;
+                transition: all 0.5s ease-in-out;
+
+                h4 {
+                    font-size: 28px;
+                    color: #333;
+                    margin-bottom: 20px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .DacBiet__item__thongtin__tags {
+                    display: flex;
+                    flex-direction: row;
+                    transition: all 0.5s ease-in-out;
+                    margin-bottom: 20px;
+
+                    h1 {
+                        color: #6c61cf;
+                        margin-right: 10px;
+                        background-color: #e3e1f5;
+                        border-radius: 15px;
+                        padding: 8px;
+                        font-size: 15px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: #6c61cf;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .DacBiet__item__thongtin__desc {
+                    margin-bottom: 20px;
+
+                    p {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        color: #7c7878;
+                        font-weight: 400;
+                    }
+                }
+
+                .DacBiet__item__thongtin__tacgia{
+                    h4{
+                        color: black;
+                        font-size: 17px;
+                    }
+                }
+                .DacBiet__item__thongtin__duoi{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    .DacBiet__item__thongtin__duoi__nut{
+                        display: flex;
+                        flex-direction: row;
+                        background-color: var(--main-color);
+                        padding: 15px 30px;
+                        border-radius: 15px;
+                        align-items: center;
+                        transition: all .3s ease-in-out;
+                        cursor: pointer;
+                        .DacBiet__item__thongtin__duoi__nut--icon{
+                            color: white;
+                            font-size: 25px;
+                            margin-right: 10px;
+                        }
+                        h1{
+                            color: white;
+                            font-size: 19px;
+                        }
+                        &:hover{
+                            background-color: #938bdf;
+                        }
+                    }
+
+                    .DacBiet__item__thongtin__duoi__gia{
+                        h1{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .DacBiet__nut{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        .DacBiet__nut__icon{
+            padding: 10px;
+            border: 1px solid #e3e1f5;
+            border-radius: 50%;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            color: #6c61cf;
+            &:hover{
+                background-color: #e3e1f5;
+                color: #6c61cf;
+            }
+        }
+    }
+}

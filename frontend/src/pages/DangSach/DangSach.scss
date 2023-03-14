@@ -1,0 +1,44 @@
+.DangSach{
+    display: flex;
+    flex-direction: column;
+    .DangSach__container{
+        margin: 50px 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            font-size: 30px;
+        }
+        .DangSach__container__form{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .DangSach__container__form__phannho{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                h2{
+                    font-size: 20px;
+
+                }
+                input{
+                    width: 200px;
+                    height: 50px;
+                    border: 1px solid rgb(78, 78, 78);
+                    margin: 10px;
+                    border-radius: 5px;
+                }
+            }
+            .DangSach__container__form__button{
+                margin-top: 20px;
+                cursor: pointer;
+                width: 100%;
+                height: 50px;
+                color: white;
+                background-color: var(--main-color);
+                border-radius: 15px;
+            }
+        }
+    }
+}

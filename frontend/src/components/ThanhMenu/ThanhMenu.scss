@@ -1,0 +1,262 @@
+.ThanhMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid rgb(0, 0, 0, .1);
+    padding: 30px 0;
+    align-items: center;
+    color: var(--main-color);
+    z-index: 999;
+    .ThanhMenu__trai {
+        display: flex;
+        flex-direction: row;
+        width: 250px;
+        margin-left: 150px;
+            
+        .ThanhMenu__trai__link{
+            text-decoration: none;
+
+        }
+        .ThanhMenu__trai--logo {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            cursor: pointer;
+
+            img {
+                border-radius: 15px;
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+            }
+
+            .ThanhMenu__trai--ten {
+                h1 {
+                    font-size: 30px;
+                    font-weight: 900;
+                    margin-left: 10px;
+                    color: #333;
+                    text-decoration: none;
+                }
+
+                p {
+                    font-size: 15px;
+                    margin-left: 10px;
+                    color: rgb(0, 0, 0, .7);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .ThanhMenu__giua {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid rgb(0, 0, 0, .1);
+        border-radius: 10px;
+        width: 50%;
+        margin: 0 20px;
+        transition: all .3s ease-in-out;
+
+        .ThanhMenu__giua--menu {
+            color: var(--main-color);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            position: relative;
+            z-index: 99;
+            &:hover {   
+                color: rgb(#6c5dd4, .4);
+            }
+
+            .ThanhMenu__giua--menu--icon {
+                padding: 0 10px;
+            }
+
+            p {
+                font-weight: 900;
+            }
+
+            &:hover {
+                .ThanhMenu__giua--menu--thanhphan {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+
+            .ThanhMenu__giua--menu--thanhphan {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 200px;
+                background-color: #6c5dd4;
+                padding: 10px 30px;
+                border-radius: 15px;
+                display: none;
+
+                a {
+                    padding: 10px 20px;
+                    margin: 5px 0;
+                    border-radius: 10px;
+                    color: var(--main-color);
+                    font-size: 20px;
+                    text-decoration: none;
+                    transition: all .3s ease-in-out;
+                    font-weight: 700;
+                    color: #fff;
+
+                    &:hover {
+                        color: #6c5dd4;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+
+        .ThanhMenu__giua--timkiem {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 80%;
+
+            input {
+                width: 100%;
+                padding: 10px 0;
+                outline: none;
+                font-size: 20px;
+
+                :focus {
+                    outline: none;
+                }
+
+                caret-color: var(--main-color);
+            }
+        }
+
+        .ThanhMenu__giua--icon--timkiem {
+            padding: 0 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .ThanhMenu__giua--icon--timkiem--icon {
+                font-size: 30px;
+                padding: 10px;
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    color: rgb(#6c5dd4, .4);
+                }
+            }
+        }
+
+    }
+
+    .ThanhMenu__phai {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 150px;
+        transition: all 1s ease-in-out;
+        .ThanhMenu__phai--dangky--icon{
+            text-decoration: none;
+        }
+        .ThanhMenu__phai--dangnhap {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: #F1EEFF;
+            color: var(--main-color);
+            font-size: 18px;
+            white-space: nowrap;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: 700;
+            margin-right: 15px;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            text-decoration: none;
+            .ThanhMenu__phai--dangnhap__link{
+                text-decoration: none;
+                color: var(--main-color);
+                transition: all .3s ease-in-out;
+            }
+            &:hover {
+                background-color: rgb(#6c5dd4, .4);
+                color: white;
+                .ThanhMenu__phai--dangnhap__link{
+                color: white;
+            }
+            }
+        }
+
+        .ThanhMenu__phai--dangky {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: white;
+            background-color: var(--main-color);
+            padding: 15px 25px;
+            font-size: 20px;
+            font-weight: 500;
+            border-radius: 10px;
+            cursor: pointer;
+            white-space: nowrap;
+
+            transition: all .3s ease-in-out;
+            box-shadow: 5px 14px 29px 3px rgba(108, 93, 212, 0.4);
+            .ThanhMenu__phai--dangky__link{
+                text-decoration: none;
+                color: white;
+                transition: all .3s ease-in-out;
+            }
+            .ThanhMenu__phai--dangky--icon {
+                margin-right: 10px;
+            }
+
+            &:hover {
+                background-color: rgb(#6c5dd4, .4);
+                color: var(--main-color);
+                 .ThanhMenu__phai--dangky__link{
+                     color: var(--main-color);
+                 }
+            }
+        }
+
+        .ThanhMenu__phai--giohang {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-right: 20px;
+            color: black;
+            border: 1px solid rgb(0, 0, 0, .1);
+            padding: 15px;
+            border-radius: 15px;
+            transition: all .3s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+                background-color: rgb(#6c5dd4, .4);
+            }
+        }
+
+        .ThanhMenu__phai--avatar {
+            margin-left: 20px;
+            cursor: pointer;
+
+            img {
+                border-radius: 15px;
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+            }
+        }
+    }
+}

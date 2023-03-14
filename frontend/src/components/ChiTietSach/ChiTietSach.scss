@@ -1,0 +1,538 @@
+.ChiTietSach {
+    margin: 0 150px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    .ChiTietSach__tren {
+        .ChiTietSach__tren__link {
+            cursor: pointer;
+            text-decoration: none;
+            color: rgb(141, 140, 140);
+        }
+    }
+
+    .ChiTietSach__duoi {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+
+        .ChiTietSach__duoi__thongtin {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .ChiTietSach__duoi__thongtin__anh {
+                height: 550px;
+                width: 380px;
+                overflow: hidden;
+                border-radius: 15px;
+
+                img {
+                    height: 550px;
+                    width: 380px;
+                    object-fit: cover;
+                    cursor: pointer;
+                    border-radius: 15px;
+                    transition: all 0.3s ease-in-out;
+                    ;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .ChiTietSach__duoi__thongtin__phai {
+                display: flex;
+                flex-direction: column;
+                width: calc(100% - 380px - 50px);
+
+                .ChiTietSach__duoi__thongtin__phai__title {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+
+                    .ChiTietSach__duoi__thongtin__phai__title__trai {
+                        display: flex;
+                        flex-direction: column;
+
+                        .ChiTietSach__duoi__thongtin__phai__title__trai__tren {
+                            display: flex;
+                            flex-direction: row;
+
+                            h1 {
+                                font-size: 40px;
+                                font-weight: bold;
+                                margin-bottom: 25px;
+                                margin-top: 5px;
+                                margin-right: 20px;
+                            }
+
+                            .ChiTietSach__duoi__thongtin__phai__title__trai__tren {
+                                display: flex;
+                                flex-direction: row;
+                                height: 35px;
+
+                                .ChiTietSach__duoi__thongtin__phai__title__trai__tren__mang__facebook {
+                                    display: flex;
+                                    flex-direction: row;
+                                    margin-right: 20px;
+                                    align-items: center;
+                                    font-weight: 700;
+                                    color: #fff;
+                                    background-color: #1E33E6;
+                                    border-radius: 15px;
+                                    padding: 10px;
+                                    transition: all 0.3s ease-in-out;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        background-color: #6270f0;
+                                        color: #fff;
+                                    }
+
+                                    .ChiTietSach__duoi__thongtin__phai__title__trai__tren__facebook {
+                                        color: #fff;
+                                        font-size: 25px;
+                                    }
+                                }
+
+                                .ChiTietSach__duoi__thongtin__phai__title__trai__tren__mang__instagram {
+                                    display: flex;
+                                    flex-direction: row;
+                                    margin-right: 20px;
+                                    align-items: center;
+                                    font-weight: 700;
+                                    color: #fff;
+                                    background-color: #ff0055;
+                                    border-radius: 15px;
+                                    padding: 10px;
+                                    transition: all 0.3s ease-in-out;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        background-color: #e1306c;
+                                        color: #fff;
+                                    }
+
+                                    .ChiTietSach__duoi__thongtin__phai__title__trai__tren__instagram {
+                                        color: #fff;
+                                        font-size: 25px;
+                                    }
+                                }
+
+                                .ChiTietSach__duoi__thongtin__phai__title__trai__tren__mang__twitter {
+                                    display: flex;
+                                    flex-direction: row;
+                                    margin-right: 20px;
+                                    align-items: center;
+                                    font-weight: 700;
+                                    color: #fff;
+                                    background-color: #3CB5DB;
+                                    border-radius: 15px;
+                                    padding: 10px;
+                                    transition: all 0.3s ease-in-out;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        background-color: #1da1f2;
+                                        color: #fff;
+                                    }
+
+                                    .ChiTietSach__duoi__thongtin__phai__title__trai__tren__twitter {
+                                        color: #fff;
+                                        font-size: 25px;
+                                    }
+                                }
+
+                                .ChiTietSach__duoi__thongtin__phai__title__trai__tren__mang__youtube {
+                                    display: flex;
+                                    flex-direction: row;
+                                    margin-right: 20px;
+                                    align-items: center;
+                                    font-weight: 700;
+                                    color: #fff;
+                                    background-color: #FF2A2A;
+                                    border-radius: 15px;
+                                    padding: 10px;
+                                    transition: all 0.3s ease-in-out;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        background-color: #e43b3b;
+                                        color: #fff;
+                                    }
+
+                                    .ChiTietSach__duoi__thongtin__phai__title__trai__tren__youtube {
+                                        color: #fff;
+                                        font-size: 25px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .ChiTietSach__duoi__thongtin__phai__title__trai__duoi {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+
+                            .ChiTietSach__duoi__thongtin__phai__title__trai__duoi__sao {
+                                margin-right: 20px;
+
+                                .ChiTietSach__duoi__thongtin__phai__title__trai__duoi__sao__chuan {
+                                    margin-right: 10px;
+                                    color: #E1E1E1;
+
+                                    &.active {
+                                        color: #FF754C;
+                                    }
+                                }
+                            }
+
+                            .ChiTietSach__duoi__thongtin__phai__title__trai__duoi__sao__so {
+                                font-size: 20px;
+                                font-weight: 800;
+                                margin-right: 20px;
+                            }
+
+                            .ChiTietSach__duoi__thongtin__phai__title__trai__duoi__comment {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                margin-right: 20px;
+
+                                .ChiTietSach__duoi__thongtin__phai__title__trai__duoi__comment__icon {
+                                    margin-right: 10px;
+                                    color: var(--main-color);
+
+                                }
+
+                                p {
+                                    font-size: 15px;
+                                    font-weight: 500;
+                                }
+                            }
+
+                            .ChiTietSach__duoi__thongtin__phai__title__trai__duoi__like {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+
+                                .ChiTietSach__duoi__thongtin__phai__title__trai__duoi__like__icon {
+                                    margin-right: 10px;
+                                    color: var(--main-color);
+
+                                }
+
+                                p {
+                                    font-size: 15px;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .ChiTietSach__duoi__thongtin__phai__mota {
+                    margin-bottom: 20px;
+
+                    p {
+                        font-size: 18px;
+                        color: #666666;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 8;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+
+                    }
+                }
+
+                .ChiTietSach__duoi__thongtin__phai__them {
+                    display: flex;
+                    flex-direction: row;
+                    border-bottom: 2px dashed #807f7f;
+
+                    .ChiTietSach__duoi__thongtin__phai__them__tacgia {
+                        margin-right: 60px;
+                        margin-bottom: 20px;
+
+                        h1 {
+                            color: rgb(105, 104, 104);
+                            font-weight: 400;
+                            text-align: left;
+                            margin-bottom: 10px;
+                        }
+
+                        p {
+                            color: #333;
+                            font-weight: 600;
+                            text-align: center;
+                        }
+                    }
+
+                    .ChiTietSach__duoi__thongtin__phai__them__nam {
+                        margin-bottom: 20px;
+
+                        h1 {
+                            color: rgb(105, 104, 104);
+                            font-weight: 400;
+                            text-align: left;
+                            margin-bottom: 10px;
+
+                        }
+
+                        p {
+                            color: #333;
+                            font-weight: 600;
+                            text-align: center;
+                        }
+                    }
+
+                }
+
+                .ChiTietSach__duoi__thongtin__phai__themvaogio {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .ChiTietSach__duoi__thongtin__phai__themvaogio__gia {
+                        display: flex;
+                        align-items: center;
+
+                        h1 {
+                            font-size: 40px;
+                            color: #151730;
+                            font-weight: 800;
+                        }
+                    }
+
+                    .ChiTietSach__duoi__thongtin__phai__themvaogio__them {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        margin-top: 20px;
+
+                        .ChiTietSach__duoi__thongtin__phai__themvaogio__them__soluong {
+                            display: flex;
+                            flex-direction: row;
+                            width: 180px;
+                            height: 60px;
+                            justify-content: space-between;
+                            border: 1px solid #E1E1E1;
+                            align-items: center;
+                            border-radius: 15px;
+                            overflow: hidden;
+                            -webkit-user-select: none;
+
+                            .ChiTietSach__duoi__thongtin__phai__themvaogio__them__soluong__tru {
+                                font-size: 60px;
+                                color: var(--main-color);
+                                margin-left: 15px;
+                                cursor: pointer;
+                                transition: all 0.3s ease-in-out;
+
+                                &:hover {
+                                    color: rgb(226, 67, 67);
+                                }
+                            }
+
+                            .ChiTietSach__duoi__thongtin__phai__themvaogio__them__soluong__so {
+                                font-size: 40px;
+                                font-weight: 700;
+                            }
+
+                            .ChiTietSach__duoi__thongtin__phai__themvaogio__them__soluong__cong {
+                                font-size: 40px;
+                                color: var(--main-color);
+                                margin-right: 10px;
+                                cursor: pointer;
+                                transition: all 0.3s ease-in-out;
+
+                                &:hover {
+                                    color: rgb(226, 67, 67);
+                                }
+                            }
+                        }
+
+                        .ChiTietSach__duoi__thongtin__phai__themvaogio__them__mua {
+                            display: flex;
+                            flex-direction: row;
+                            margin-left: 20px;
+                            margin-right: 20px;
+
+                            .ChiTietSach__duoi__thongtin__phai__themvaogio__them__mua__nut {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                background-color: var(--main-color);
+                                padding: 20px 30px;
+                                border-radius: 15px;
+                                cursor: pointer;
+                                transition: all 0.3s ease-in-out;
+
+                                .ChiTietSach__duoi__thongtin__phai__themvaogio__them__mua__nut__icon {
+                                    color: white;
+                                    margin-right: 5px;
+                                }
+
+                                p {
+                                    color: white;
+                                    font-weight: 600;
+                                }
+
+                                &:hover {
+                                    background-color: #8e96e2;
+                                }
+                            }
+                        }
+
+                        .ChiTietSach__duoi__thongtin__phai__themvaogio__them__mua__like {
+                            border: 1px solid #E1E1E1;
+                            padding: 15px;
+                            border-radius: 15px;
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: var(--main-color);
+
+                                .ChiTietSach__duoi__thongtin__phai__themvaogio__them__mua__like__icon {
+                                    color: #fff;
+                                }
+                            }
+
+                            &.active {
+                                background-color: var(--main-color);
+
+                                .ChiTietSach__duoi__thongtin__phai__themvaogio__them__mua__like__icon {
+                                    color: #fff;
+                                }
+                            }
+
+                            .ChiTietSach__duoi__thongtin__phai__themvaogio__them__mua__like__icon {
+                                color: var(--main-color);
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ChiTietSach__duoi__comment{
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            .ChiTietSach__duoi__comment__title{
+                display: flex;
+                flex-direction: row;
+                color: #11152D;
+                h1{
+                    font-size: 40px;
+                    margin-bottom: 50px;
+                }
+            }
+            .ChiTietSach__duoi__comment__noidung{
+                display: flex;
+                flex-direction: column;
+                .ChiTietSach__duoi__comment__noidung__item{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    border: 1px solid rgb(231, 229, 229);
+                    padding:30px 50px;
+                    margin-top: 20px;
+                    border-radius: 15px;
+                    .ChiTietSach__duoi__comment__noidung__item__trai{
+                        display: flex;
+                        flex-direction: column;
+                        .ChiTietSach__duoi__comment__noidung__item__trai__avatar{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            img{
+                                width: 50px;
+                                height: 50px;
+                                border-radius: 15px;
+                                cursor: pointer;
+                            }
+                            .ChiTietSach__duoi__comment__noidung__item__trai__avatar__name{
+                                display: flex;
+                                flex-direction: column;
+                                margin-left: 20px;
+
+                                h2{
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                    cursor: pointer;
+                                }
+                                p{
+                                    font-size: 14px;
+                                    color: rgb(134, 134, 134);
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                        .ChiTietSach__duoi__comment__noidung__item__trai__comment{
+                            margin-top: 40px;
+                            p{
+                                font-size: 16px;
+                                color: #3a3d4b;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                    .ChiTietSach__duoi__comment__noidung__item__phai{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .ChiTietSach__duoi__comment__noidung__item__phai__sosao{
+                            display: flex;
+                            flex-direction: row;
+                            color: #FF754C;
+                            h2{
+                                font-size: 30px;
+                                font-weight: 800;
+                            }
+                        }
+                        .ChiTietSach__duoi__comment__noidung__item__phai__danhgia{
+                            display: flex;
+                            flex-direction: row;
+                            color: #E1E1E1 ;
+                            .ChiTietSach__duoi__comment__noidung__item__phai__danhgia__sao{
+
+                                &.active{
+                                color: #FF754C ;
+    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .ChiTietSach__duoi__comment__showMoreComment{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                margin-top: 50px;
+                h3{
+                    text-align: center;
+                    width: 100%;
+                    background-color: var(--main-color);
+                    padding: 20px;
+                    color: white;
+                    cursor: pointer;
+                    border-radius: 15px;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        background-color: #626fdf;
+                    }
+                }
+            }
+        }
+    }
+}
