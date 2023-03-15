@@ -21,7 +21,7 @@ const ThanhMenu = () => {
             <div className="ThanhMenu__trai">
                 <Link to="/" className='ThanhMenu__trai__link'>
                     <div className="ThanhMenu__trai--logo">
-                        <img src={process.env.PUBLIC_URL + 'Logo.png'} alt="" />
+                        <img src={'http://localhost:3000/Logo.png'} alt="" />
                         <div className="ThanhMenu__trai--ten">
                             <h1>Bookoe</h1>
                             <p>Book Store 5 Chú Hề</p>

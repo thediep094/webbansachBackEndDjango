@@ -26,7 +26,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="Footer__giua">
-                <img src={process.env.PUBLIC_URL + "typeemailbackground.png"} alt="" />
+                <img src={"http://localhost:3000/typeemailbackground.png"} alt="" />
                 <h1>Đăng ký email ở đây để có thể nhận được thông báo về nhiều cuốn sách hay nhất.</h1>
                 <div className="Footer__giua__email">
                     <input type="text" placeholder="Nhập email của bạn" />
@@ -36,7 +36,7 @@ const Footer = () => {
             <div className="Footer__duoi">
                 <div className="Footer__duoi__trai">
                     <div className="ThanhMenu__trai--logo">
-                        <img src={process.env.PUBLIC_URL + 'Logo.png'} alt="" />
+                        <img src={'http://localhost:3000/Logo.png'} alt="" />
                         <div className="ThanhMenu__trai--ten">
                             <h2>Bookoe</h2>
                             <p>Book Store 5 Chú Hề</p>
@@ -72,7 +72,7 @@ const Footer = () => {
                 </div>
                 <div className="Footer__duoi__phai">
                     <h2>Cửa hàng của chúng tôi</h2>
-                    <img src={process.env.PUBLIC_URL + "cuahang.jpg"} alt="" />
+                    <img src={"http://localhost:3000/cuahang.jpg"} alt="" />
                     <div className="Footer__duoi__diachi">
                         <LocationOn />
                         <h1>Học viện Công nghệ Bưu chính viễn thông</h1>

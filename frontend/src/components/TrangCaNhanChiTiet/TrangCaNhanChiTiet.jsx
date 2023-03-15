@@ -197,7 +197,7 @@ const TrangCaNhanChiTiet = () => {
                           key={index}
                       >
                           <Link
-                          to={`/chitiet/${product.id}`}
+                          to={`/chitiet/${product.book.id}`}
                           className="TrangCaNhanChiTiet__phai__danhsach__item__link"
                           >
                           <div className="TrangCaNhanChiTiet__phai__danhsach__item__hinhanh">

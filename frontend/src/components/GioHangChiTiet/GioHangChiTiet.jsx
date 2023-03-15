@@ -7,12 +7,14 @@ import { apiUrl } from "../../giaTriMacDinh";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import {removeProduct, removeAllProduct} from '../../redux/cartSlice.js'
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 function doiSangPhanNghin(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 const GioHangChiTiet = () => {
   const user = useSelector((state) => state.user);
   const cart = useSelector((state) => state.cart);
+  const [enable, setEnable] = useState(false)
   const dispatch = useDispatch()
   // const [gioHangSanPham, setGioHangSanPham] = useState([])
   const [click, setClick] = useState(false);
@@ -42,6 +44,29 @@ const GioHangChiTiet = () => {
       dispatch(removeAllProduct())
     }
   };
+  
+  const createOrder = (data, actions) => {
+    return actions.order.create({
+      purchase_units: [
+        {
+          amount: {
+            value: "0.01",
+          },
+        },
+      ],
+    });
+  };
+
+  const onApprove = (data, actions) => {
+    setEnable(true)
+    return actions.order.capture();
+  };
+
+  const onError = (error) => {
+    console.log(error);
+  };
+
+
   return (
     <div className="GioHangChiTiet">
       <div className="GioHangChiTiet__trai">
@@ -144,13 +169,35 @@ const GioHangChiTiet = () => {
       </div>
       <div className="GioHangChiTiet__phai">
         <h1>Số lượng sách trong giỏ: {cart.cart.reduce((total, item)=> total + item.quantity, 0)}</h1>
-
         <h2>Tổng số tiền: {doiSangPhanNghin(Number(cart.total))} VNĐ</h2>
         <div
           className="GioHangChiTiet__phai__thanhtoan"
-          onClick={() => xacNhanMuaHang()}
+          onClick={() => {
+            if(enable){
+              xacNhanMuaHang()
+            }
+          }}
+          style={{
+            opacity: enable ? '1' : '0.5'
+          }}
         >
           Xác nhận mua hàng
+        </div>
+        <div className="paypal" style={{
+          marginTop: '20px',
+        }}>
+        <PayPalScriptProvider
+      options={{
+        "client-id": "AVuGBAqqDkZCEVUMp8IP2f7FBMtW3DNqG8pHOl48LYAQYwk8rVAQfXkkDoRm4SGygGTG8bnCiRYVhxkX",
+        currency: "USD",
+      }}
+    >
+      <PayPalButtons
+        createOrder={createOrder}
+        onApprove={onApprove}
+        onError={onError}
+      />
+    </PayPalScriptProvider>
         </div>
       </div>
     </div>
