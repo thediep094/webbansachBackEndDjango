@@ -52,6 +52,7 @@ class Order(models.Model):
     account = models.ForeignKey(Account, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    is_checkout = models.BooleanField(default=False, choices=[(True,"Đã thanh toán"),(False,"Chưa thanh toán")])
 
     def __str__(self) -> str:
         return f"{self.account}"
