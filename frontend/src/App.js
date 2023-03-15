@@ -29,7 +29,7 @@ function App() {
         <Route path="/giohang" element={<GioHang />} />{" "}
         <Route path="/dangky" element={<DangKyDangNhap />} />{" "}
         <Route path="/dangnhap" element={<DangNhap />} />{" "}
-        <Route path="/trangcanhan" element={<TrangCaNhan />} />{" "}
+        <Route path="/trangcanhan/:id" element={<TrangCaNhan />} />{" "}
         <Route path="/dangsach" element={<DangSach />} />{" "}
       </Routes>{" "}
     </div>

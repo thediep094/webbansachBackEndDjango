@@ -10,13 +10,16 @@ import { ArrowForward, ShoppingCartOutlined, Star } from '@mui/icons-material'
 import { timKiem } from '../../data/timKiem'
 import axios from 'axios'
 import { apiUrl } from '../../giaTriMacDinh';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import {add} from '../../redux/cartSlice.js'
 function doiSangPhanNghin(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 }
 export const TheLoaiSach = () => {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
     const user = useSelector(state => state.user)
+    const cart = useSelector(state => state.cart)
     const [sapXepTheoKieu, setSapXepTheoKieu] = useState('')
     const doiSapXep = (event) => {
         setSapXepTheoKieu(event.target.value);
@@ -60,7 +63,6 @@ export const TheLoaiSach = () => {
         try {
             const res = await axios.get(`http://localhost:8000/books/`);
             setData(res.data);
-            console.log(res.data)
         } catch (error) {
             console.log(error)
         }
@@ -175,27 +177,13 @@ export const TheLoaiSach = () => {
         getApi()
     }
 
-    const themSachGioHang = async (id) => {
-        try {
-            const res = await axios.post(`${apiUrl}api/giohangs`, {
-                sachId: id,
-                soLuong: 1
-            }, {
-                headers: {
-                    token: `Bearer ${user.user.accessToken}`
-                }
-            })
-            if (res.data.success) {
-                alert('Đã thêm vào giỏ hàng')
-                navigate(`/theloai`)
-
-            } else {
-                alert('Có lỗi xảy ra')
-            }
-        }
-        catch (err) {
-            console.log(err)
-        }
+    const themSachGioHang = async (item) => {
+       if(!user.user){
+        alert("Ban can dang nhap")
+       } else {
+        dispatch(add({item, quantity: 1}));
+        alert("Them thanh cong")
+       }
     }
 
 
@@ -358,7 +346,7 @@ export const TheLoaiSach = () => {
                                                     </div>
                                                     <div className="TheLoaiSach__duoi__danhsach__item__thongtin__duoi__phai">
                                                         <div className="TheLoaiSach__duoi__danhsach__item__thongtin__duoi__phai__nut" onClick={() => {
-                                                            themSachGioHang(item._id)
+                                                            themSachGioHang(item)
                                                         }} >
                                                             <ShoppingCartOutlined className='TheLoaiSach__duoi__danhsach__item__thongtin__duoi__phai__nut__icon' />
                                                             <p>Thêm vào giỏ</p>

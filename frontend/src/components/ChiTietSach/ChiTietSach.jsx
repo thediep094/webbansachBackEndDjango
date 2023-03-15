@@ -6,7 +6,8 @@ import { useEffect, useState } from 'react'
 import { Comment, Facebook, FavoriteBorder, Instagram, ShoppingCartOutlined, Star, ThumbUp, Twitter, YouTube } from '@mui/icons-material'
 import { apiUrl } from '../../giaTriMacDinh'
 import axios from 'axios'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
+import {add, updateProductQuantity} from '../../redux/cartSlice.js'
 function doiSangPhanNghin(x) {
     if (x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
@@ -15,7 +16,9 @@ function doiSangPhanNghin(x) {
 // import { useSelector } from 'react-redux'
 const ChiTietSach = ({ id }) => {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
     const user = useSelector(state => state.user)
+    const cart = useSelector(state => state.cart)
     const [soLuong, setSoLuong] = useState(0)
     const tangSoLuong = () => {
         setSoLuong(soLuong + 1)
@@ -44,28 +47,14 @@ const ChiTietSach = ({ id }) => {
             setDuLieuSach(res.data)
         }
         chiTietSach()
+
     }, [id])
 
     const themSachGioHang = async () => {
-        try {
-            const res = await axios.post(`${apiUrl}api/giohangs`, {
-                sachId: id,
-                soLuong: soLuong
-            }, {
-                headers: {
-                    token: `Bearer ${user.user.accessToken}`
-                }
-            })
-            if (res.data.success) {
-                alert('Đã thêm vào giỏ hàng')
-                navigate(`/theloai`)
-
-            } else {
-                alert('Có lỗi xảy ra')
-            }
-        }
-        catch (err) {
-            console.log(err)
+        if(!user.user){
+            alert("Ban can dang nhap")
+        } else {
+            dispatch(add({item: duLieuSach, quantity: soLuong}))
         }
     }
     return (

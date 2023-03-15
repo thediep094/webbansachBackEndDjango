@@ -125,11 +125,51 @@ def createAccount(request):
 @api_view(['POST'])
 def loginAccount(request):
     data = request.data
-    print(data.username)
-    account = get_object_or_404(Account,data = data.username)
-    if(data.password == account.password):
+    account = Account.objects.get(username = data['username'])
+    if(data['password'] == account.password):
         serializer = AccountSerializer(account, many= False)   
-        return Response(serializer) 
+        return Response(serializer.data) 
     else:
         return Response(status=404)
     
+
+# Order
+@api_view(['POST'])
+def createOrder(request):
+    """
+    Tạo đơn hàng mới.
+    """
+    account = Account.objects.get(id = request.data.get('id'))
+    if not account:
+            return Response({'error': 'Account ID is required.'}, status=status.HTTP_400_BAD_REQUEST)
+    order_data = {
+            'account': account.id,
+        }
+
+    serializer = OrderSerializer(data = order_data)
+    if serializer.is_valid():
+        order = serializer.save()
+        # Tạo chi tiết đơn hàng
+        cart_items = request.data.get('items')
+        for cart_item in cart_items:
+            book_id = cart_item.get('id')
+            book = get_object_or_404(Book, id=book_id)
+            quantity = cart_item.get('quantity')
+            price = book.price
+            OrderItem.objects.create(order=order, book=book, quantity=quantity, price=price)
+
+        return Response(serializer.data)
+    return Response(serializer.errors)
+
+@api_view(['GET'])
+def retrieveOrder(request, id):
+    """
+    Lấy thông tin chi tiết của một đơn hàng.
+    """
+    account = Account.objects.get(id = id)
+    if not account:
+            return Response({'error': 'Account ID is required.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    order = Order.objects.filter(account = account).order_by('-created_at')
+    serializer = OrderSerializer(order, many=True)
+    return Response(serializer.data)

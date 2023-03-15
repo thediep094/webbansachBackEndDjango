@@ -5,11 +5,10 @@ import GioHangChiTiet from '../../components/GioHangChiTiet/GioHangChiTiet'
 import { useLocation } from 'react-router-dom'
 const GioHang = () => {
     const location = useLocation()
-    const gioHangData = location.state.gioHangSanPham
     return (
         <div className="GioHang">
             <ThanhMenu />
-            <GioHangChiTiet gioHangData={gioHangData} />
+            <GioHangChiTiet />
             <Footer />
         </div>
     )

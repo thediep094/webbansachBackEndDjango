@@ -20,3 +20,15 @@ class CollectionSerializer(ModelSerializer):
     class Meta:
         model = Collection
         fields = '__all__'
+
+class OrderItemSerializer(ModelSerializer):
+    book = BookSerializer()
+    class Meta:
+        model = OrderItem
+        fields = '__all__'
+
+class OrderSerializer(ModelSerializer):
+    items = OrderItemSerializer(many=True, read_only=True)
+    class Meta:
+        model = Order
+        fields = '__all__'
