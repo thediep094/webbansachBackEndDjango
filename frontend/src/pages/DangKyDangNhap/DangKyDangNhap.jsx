@@ -10,12 +10,12 @@ import { apiUrl } from '../../giaTriMacDinh'
 const DangKyDangNhap = () => {
     const navigate = useNavigate()
     const [user, setUser] = useState({
-        tenDangNhap: '',
-        matKhau: '',
-        hoVaTen: '',
-        email: '',
-        sdt: '',
-        diaChi: ''
+        username: 'acbsc',
+        password: 'dsadas',
+        fullname: 'dasdasd',
+        email: 'dasdsa@gmail.com',
+        sdt: '0232183232',
+        location: 'dsadsdasd'
     })
 
     const [nhapLaiMatKhau, setNhapLaiMatKhau] = useState('')
@@ -27,17 +27,16 @@ const DangKyDangNhap = () => {
     }
 
     const dangKy = async () => {
-        if (nhapLaiMatKhau !== user.matKhau) {
+        if (nhapLaiMatKhau !== user.password) {
             alert('Mật khẩu nhập lại không đúng')
         }
         else {
-            if (!user.tenDangNhap || !user.matKhau || !user.hoVaTen || !user.email || !user.sdt || !user.diaChi) {
+            if (!user.username || !user.password || !user.fullname || !user.email || !user.sdt || !user.location) {
                 alert('Vui lòng nhập đầy đủ thông tin')
             }
             else {
-
                 try {
-                    await axios.post(`${apiUrl}api/auth/dangky`, user)
+                    await axios.post(`http://localhost:8000/accounts/create`, user)
                     alert('Đăng ký thành công')
                     navigate('/dangnhap')
                 } catch (error) {
@@ -60,11 +59,11 @@ const DangKyDangNhap = () => {
                     <div className="DangKyDangNhap__giua__dangky__form">
                         <div className="DangKyDangNhap__giua__dangky__form__item">
                             <label>Tên đăng nhập</label>
-                            <input type="text" name='tenDangNhap' onChange={thayDoi} />
+                            <input type="text" name='username' onChange={thayDoi} />
                         </div>
                         <div className="DangKyDangNhap__giua__dangky__form__item">
                             <label>Mật khẩu</label>
-                            <input type="password" name='matKhau' onChange={thayDoi} />
+                            <input type="password" name='password' onChange={thayDoi} />
                         </div>
                         <div className="DangKyDangNhap__giua__dangky__form__item">
                             <label>Nhập lại mật khẩu</label>
@@ -74,7 +73,7 @@ const DangKyDangNhap = () => {
                         </div>
                         <div className="DangKyDangNhap__giua__dangky__form__item">
                             <label>Họ và tên</label>
-                            <input type="text" name='hoVaTen' onChange={thayDoi} />
+                            <input type="text" name='fullname' onChange={thayDoi} />
                         </div>
                         <div className="DangKyDangNhap__giua__dangky__form__item">
                             <label>Email</label>
@@ -86,7 +85,7 @@ const DangKyDangNhap = () => {
                         </div>
                         <div className="DangKyDangNhap__giua__dangky__form__item">
                             <label>Địa chỉ</label>
-                            <input type="text" name='diaChi' onChange={thayDoi} />
+                            <input type="text" name='location' onChange={thayDoi} />
                         </div>
                     </div>
                     <Link to="/dangnhap" className='DangKyDangNhap__giua__dangky__link'><span>Bạn đã có tài khoản?</span></Link>

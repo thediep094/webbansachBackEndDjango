@@ -4,4 +4,5 @@ from .models import *
 
 admin.site.register(Note)
 admin.site.register(Book)
+admin.site.register(Account)
 admin.site.register(Collection)

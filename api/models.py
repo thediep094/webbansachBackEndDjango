@@ -2,7 +2,16 @@ from django.db import models
 # sau khi tao modal chay python manage.py migrate
 #sau do chay python manage.py makemigrations
 # Create your models here.
+class Account(models.Model):
+    username = models.TextField(null=False, blank='')
+    password = models.TextField(null=False, blank='')
+    email = models.EmailField(null=False, blank='', default="")
+    sdt = models.TextField(null=True, blank='')
+    location = models.TextField(null=True, blank='')
+    fullname = models.TextField(null=True, blank='')
 
+    def __str__(self):
+        return self.username
 
 class Note(models.Model):
     body = models.TextField(null=True, blank=True)

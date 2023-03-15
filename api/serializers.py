@@ -1,5 +1,4 @@
-from rest_framework.serializers import ModelSerializer, SerializerMethodField
-from django.contrib.auth.models import User
+from rest_framework.serializers import ModelSerializer
 from .models import *
 
 class NoteSerializers(ModelSerializer):
@@ -12,11 +11,9 @@ class BookSerializer(ModelSerializer):
         model = Book
         fields = '__all__'
 
-    
-
-class UserSerializer(ModelSerializer):
+class AccountSerializer(ModelSerializer):
     class Meta:
-        model = User
+        model = Account
         fields = '__all__'
 
 class CollectionSerializer(ModelSerializer):
